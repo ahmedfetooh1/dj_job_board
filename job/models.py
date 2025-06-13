@@ -15,7 +15,7 @@ JOB_TYPE = (
     ('full time','full time'),
     ('part time','part time')
 )
-class JOb(models.Model):         #table
+class JOB(models.Model):         #table
 
 
     
