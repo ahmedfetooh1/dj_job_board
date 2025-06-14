@@ -1,3 +1,4 @@
+from tkinter import image_names
 from django.db import models
 
 # Create your models here.
@@ -15,6 +16,11 @@ JOB_TYPE = (
     ('full time','full time'),
     ('part time','part time')
 )
+def image_upload(instance,filename):
+    imagenamme , extension = filename.split(".")
+    return 'jobs/%s.%s' %(instance.id,extension)
+
+
 class JOB(models.Model):         #table
 
 
@@ -28,6 +34,7 @@ class JOB(models.Model):         #table
     salary = models.IntegerField(default=0)
     category = models.ForeignKey('Category',on_delete=models.CASCADE)
     experience = models.IntegerField(default=1)
+    image = models.ImageField(upload_to=image_upload)
 
 
 
