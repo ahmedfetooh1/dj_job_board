@@ -22,9 +22,6 @@ def image_upload(instance,filename):
 
 
 class JOB(models.Model):         #table
-
-
-    
     title = models.CharField(max_length=100)    #columns
     #location
     job_type = models.CharField(max_length=15,choices=JOB_TYPE)
