@@ -43,3 +43,15 @@ class JOB(models.Model):         #table
     def __str__(self):
         return self.title
 
+
+class Apply(models.Model):
+    job = models.ForeignKey(JOB,related_name='apply_job',on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=100)
+    website = models.URLField()
+    cv = models.FileField(upload_to='apply/')
+    created_at = models.DateTimeField(auto_now=True)
+    cover_letter = models.TextField(max_length=500)
+
+    def __str__(self):
+        return self.name
