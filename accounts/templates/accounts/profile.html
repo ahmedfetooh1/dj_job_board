@@ -27,12 +27,12 @@
                         <div class="job_content">
                             <ul>
                                 <li>Name: <span>{{profile}}</span></li>
-                                <li>Email: <span>{{profile.user.email}} Position</span></li>
-                                <li>Phone: <span>{{profile.phone_number}}k/y</span></li>
+                                <li>Email: <span>{{profile.user.email}}</span></li>
+                                <li>Phone: <span>{{profile.phone_number}}</span></li>
                                 <li>Address: <span>{{profile.city}}</span></li>
                             </ul>
                             <div>
-                                <a href="" class="boxed-btn3 w-100">Edit Profile</a>
+                                <a href="{% url 'accounts:profile_edit' %}" class="boxed-btn3 w-100">Edit Profile</a>
                             </div>
                         </div>
                     </div>
