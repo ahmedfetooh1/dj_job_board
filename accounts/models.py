@@ -9,6 +9,9 @@ from django.contrib.auth.models import User
 class City(models.Model):
     name = models.CharField(max_length=30)
 
+    def __str__(self):
+        return self.name
+
 
 # create new user > create new empty
 
