@@ -1,8 +1,10 @@
 
-# from . import views
-# from django.urls import path
-# app_name = 'contact'
+from . import views
+from django.urls import path
 
-# urlspatterns = [
-#     path('contact/',views.contact_us)
-# ]
+app_name = 'contact'
+
+urlpatterns = [
+    path('',views.send_message,name='contact'),
+
+]
